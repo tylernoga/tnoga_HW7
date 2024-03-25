@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analytics Student Survey - Page 2</title>
+      <!-- Link Google Font -->
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+      <!-- Link Font Awesome -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <!-- Link external stylesheet -->
+      <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Business Analytics Student Survey - Page 2</h2>
+<!-- Question 5 -->
+<p>5. I am finishing my:</p>
+<div>
+    <input type="radio" id="first_year" name="years_at_iowa" value="First year at Iowa" required>
+    <label for="first_year">First year at Iowa</label>
+</div>
+<div>
+    <input type="radio" id="second_year" name="years_at_iowa" value="Second year at Iowa">
+    <label for="second_year">Second year at Iowa</label>
+</div>
+<div>
+    <input type="radio" id="third_year" name="years_at_iowa" value="Third year at Iowa">
+    <label for="third_year">Third year at Iowa</label>
+</div>
+<div>
+    <input type="radio" id="fourth_year" name="years_at_iowa" value="Fourth year at Iowa">
+    <label for="fourth_year">Fourth year at Iowa</label>
+</div>
+<div>
+    <input type="radio" id="fifth_or_more_year" name="years_at_iowa" value="Fifth or more year at Iowa">
+    <label for="fifth_or_more_year">Fifth or more year at Iowa</label>
+</div>
+
+<!-- Question 6 -->
+<p>6. BAIS core classes I have completed:</p>
+<div>
+    <input type="checkbox" id="information_systems" name="core_classes" value="Information Systems">
+    <label for="information_systems">Information Systems</label>
+</div>
+<div>
+    <input type="checkbox" id="operations" name="core_classes" value="Operations">
+    <label for="operations">Operations</label>
+</div>
+<div>
+    <input type="checkbox" id="foundations_of_business_analytics" name="core_classes" value="Foundations of Business Analytics">
+    <label for="foundations_of_business_analytics">Foundations of Business Analytics</label>
+</div>
+<div>
+    <input type="checkbox" id="computational_thinking" name="core_classes" value="Computational Thinking">
+    <label for="computational_thinking">Computational Thinking</label>
+</div>
+<div>
+    <input type="checkbox" id="database_management" name="core_classes" value="Database Management">
+    <label for="database_management">Database Management</label>
+</div>
+<div>
+    <input type="checkbox" id="data_wrangling" name="core_classes" value="Data Wrangling">
+    <label for="data_wrangling">Data Wrangling</label>
+</div>
+<div>
+    <input type="checkbox" id="data_mining" name="core_classes" value="Data Mining">
+    <label for="data_mining">Data Mining</label>
+</div>
+<div>
+    <input type="checkbox" id="bais_capstone" name="core_classes" value="BAIS Capstone">
+    <label for="bais_capstone">BAIS Capstone</label>
+</div>
+
+    </div>
+    <button onclick="validateFormAndNavigate()" class="btn">Next</button>
+</div>
+
+<script>
+    function validateFormAndNavigate() {
+        var inputs = document.querySelectorAll('input[required], select[required]');
+        for (var i = 0; i < inputs.length; i++) {
+            if (!inputs[i].value) {
+                alert("Please fill out all required fields.");
+                return false;
+            }
+        }
+        // Proceed to the next page if all required fields are filled
+        window.location.href = "tnoga_p3.html";
+    }
+</script>
+</body>
+</html>

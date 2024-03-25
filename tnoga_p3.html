@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analytics Student Survey - Page 3</title>
+    <!-- Link Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Link external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Business Analytics Student Survey - Page 3</h2>
+        <!-- Question about race/ethnicity -->
+        <p>1. What is your race/ethnicity?</p>
+        <div class="tooltip">
+            <span class="tooltip-text">This information is collected to ensure diversity and inclusion.</span>
+            <select id="race_ethnicity" required>
+                <option value="">Select</option>
+                <option value="Asian">Asian</option>
+                <option value="Black or African American">Black or African American</option>
+                <option value="Hispanic or Latino">Hispanic or Latino</option>
+                <option value="White">White</option>
+                <option value="Native American or Alaska Native">Native American or Alaska Native</option>
+                <option value="Native Hawaiian or Pacific Islander">Native Hawaiian or Pacific Islander</option>
+                <option value="Two or more races">Two or more races</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        
+        <!-- Question about gender/sex -->
+        <p>2. What is your gender/sex?</p>
+        <div class="tooltip">
+            <span class="tooltip-text">This information is collected to understand gender representation.</span>
+            <select id="gender" required>
+                <option value="">Select</option>
+                <option value="Female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Non-binary/third gender">Non-binary/third gender</option>
+                <option value="Prefer not to say">Prefer not to say</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <button onclick="location.href='confirmation.html'" class="btn">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

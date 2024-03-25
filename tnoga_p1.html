@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analytics Student Survey - Page 1</title>
+     <!-- Link Google Font -->
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+     <!-- Link Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     <!-- Link external stylesheet -->
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Business Analytics Student Survey - Page 1</h2>
+        <!-- Question 1 -->
+        <p>1. My home country is:</p>
+        <input type="text" id="home_country" autofocus>
+        <!-- Question 2 -->
+        <p>2. My hometown is:</p>
+        <input type="text" id="hometown" required>
+        <!-- Question 3 -->
+        <p>3. My home state is:</p>
+        <select name="state" id="state-select">
+            <option value="">-- choose state/territory --</option>
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+            <!-- Added Washington D.C. -->
+            <option value="DC">DC - Washington D.C.</option>
+            <!-- Added U.S. Territories -->
+            <option value="AS">AS - American Samoa</option>
+            <option value="GU">GU - Guam</option>
+            <option value="MP">MP - Northern Mariana Islands</option>
+            <option value="PR">PR - Puerto Rico</option>
+            <option value="VI">VI - U.S. Virgin Islands</option>
+        </select>
+
+        </select>
+        <!-- Question 4 -->
+        <p>4. My impressions of the BAIS major is:</p>
+        <select id="impressions" required>
+            <option value="">Select</option>
+            <option value="5">Very positive</option>
+            <option value="4">Somewhat positive</option>
+            <option value="3">Neutral</option>
+            <option value="2">Somewhat negative</option>
+            <option value="1">Very negative</option>
+        </select>
+        
+        <button onclick="validateFormAndNavigate()" class="btn">Next</button>
+    </div>
+
+    <script>
+        function validateFormAndNavigate() {
+            var inputs = document.querySelectorAll('input[required], select[required]');
+            for (var i = 0; i < inputs.length; i++) {
+                if (!inputs[i].value) {
+                    alert("Please fill out all required fields.");
+                    return false;
+                }
+            }
+            // Proceed to the next page if all required fields are filled
+            window.location.href = "tnoga_p2.html";
+        }
+    </script>
+</body>
+</html>
